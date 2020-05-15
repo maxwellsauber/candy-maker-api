@@ -23,7 +23,7 @@ module.exports = {
     return queryInterface.createTable('products', {
       id: { type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true },
       name: { type: Sequelize.STRING },
-      yearIntroduced: { type: Sequelize.DATE },
+      yearIntroduced: { type: Sequelize.DATEONLY },
       manufacturerId: { type: Sequelize.INTEGER, references: { model: 'manufacturers', key: 'id' } },
       createdAt: { type: Sequelize.DATE, defaultValue: Sequelize.literal('CURRENT_TIMESTAMP') },
       updatedAt: {
