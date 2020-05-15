@@ -34,7 +34,7 @@ const getProductsWithManufacturersByName = async (request, response) => {
     return matchingProducts
       ? response.send(matchingProducts)
       : response.status(404)
-        .send('server error 500')
+        .send('ITEM NOT FOUND')
   }
   catch (error) {
     return response.status(500).send('500 errors!')
